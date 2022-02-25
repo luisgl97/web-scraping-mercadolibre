@@ -1,0 +1,5 @@
+requests
+bs4
+lxml
+Flask==2.0.3
+gunicorn
