@@ -1,2 +1,11 @@
 C:\Users\PC\Desktop\Proyectos\web_scraping>virtualenv venv
+C:\Users\PC\Desktop\Proyectos\web_scraping>.\venv\Scripts\activate.ps1
+
+Github 
+git init 
+git status 
+git add . 
+git commit -m "modificacion"
+git push
+
 
