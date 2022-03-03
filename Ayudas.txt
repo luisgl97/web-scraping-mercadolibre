@@ -9,3 +9,10 @@ git commit -m "modificacion"
 git push
 
 
+git init
+git add .
+git commit -m 'message'
+git remote add origin https://github.com/luisgl97/DjangoAPI.git
+git push -u origin main
+
+
