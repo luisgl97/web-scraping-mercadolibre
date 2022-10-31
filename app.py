@@ -38,7 +38,7 @@ def descargarInfo():
         print(limite)
         
         #Consumir API
-        r = requests.get('http://192.168.1.22:5000/mercadoLibre', json={"producto":producto, "limite":int(limite)})
+        r = requests.get('https://web-scraping-mercado-libre.herokuapp.com/mercadoLibre', json={"producto":producto, "limite":int(limite)})
         print(r.status_code)
         print(producto,limite)
         
