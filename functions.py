@@ -21,13 +21,13 @@ def todosProductos(url,producto):
             lista_titulos.extend(titulos)
             
             #Obtener urls
-            urls = soup.find_all('a',attrs={"class":"ui-search-item__group__element ui-search-link"})
+            urls = soup.find_all('a',attrs={"class":"ui-search-item__group__element shops__items-group-details ui-search-link"})
             urls = [i.get ('href') for i in urls]
             lista_urls.extend(urls)
             
             #Obtener precios
             dom = etree.HTML(str(soup))
-            precios = dom.xpath('//span[@class="price-tag ui-search-price__part"]//span[@class="price-tag-fraction"]')
+            precios = dom.xpath('//span[@class="price-tag ui-search-price__part shops__price-part"]//span[@class="price-tag-fraction"]')
             precios = [i.text for i in precios]
             lista_precios.extend(precios)
             
@@ -59,19 +59,19 @@ def limiteProductos(url,producto,limite):
         
         if r.status_code == 200:
             soup = BeautifulSoup(r.content, 'html.parser')
-            #Obtener titulos
+           #Obtener titulos
             titulos = soup.find_all('h2',attrs={"class":"ui-search-item__title"})
             titulos = [i.text for i in titulos]
             lista_titulos.extend(titulos)
             
             #Obtener urls
-            urls = soup.find_all('a',attrs={"class":"ui-search-item__group__element ui-search-link"})
+            urls = soup.find_all('a',attrs={"class":"ui-search-item__group__element shops__items-group-details ui-search-link"})
             urls = [i.get ('href') for i in urls]
             lista_urls.extend(urls)
             
             #Obtener precios
             dom = etree.HTML(str(soup))
-            precios = dom.xpath('//span[@class="price-tag ui-search-price__part"]//span[@class="price-tag-fraction"]')
+            precios = dom.xpath('//span[@class="price-tag ui-search-price__part shops__price-part"]//span[@class="price-tag-fraction"]')
             precios = [i.text for i in precios]
             lista_precios.extend(precios)
             

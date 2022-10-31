@@ -2,12 +2,11 @@
 from flask import Flask, jsonify, render_template, request, Response
 import json
 
-from numpy import product
 from functions import todosProductos, limiteProductos
 import requests
 
 app = Flask(__name__)
-# Api url: https://web-scraping-mercado-libre.herokuapp.com/
+
 #url en postman : https://web-scraping-mercado-libre.herokuapp.com/mercadoLibre 
 @app.route('/mercadoLibre',methods=["GET"])
 def mercadoLibre():
@@ -27,6 +26,7 @@ def mercadoLibre():
         }
     })
 
+#http://192.168.1.22:5000/descargarInfo
 @app.route("/descargarInfo",methods=["GET","POST"])
 def descargarInfo():
    
@@ -38,7 +38,7 @@ def descargarInfo():
         print(limite)
         
         #Consumir API
-        r = requests.get('https://web-scraping-mercado-libre.herokuapp.com/mercadoLibre', json={"producto":producto, "limite":int(limite)})
+        r = requests.get('http://192.168.1.22:5000/mercadoLibre', json={"producto":producto, "limite":int(limite)})
         print(r.status_code)
         print(producto,limite)
         

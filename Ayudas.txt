@@ -1,5 +1,7 @@
 C:\Users\PC\Desktop\Proyectos\web_scraping>virtualenv venv
-C:\Users\PC\Desktop\Proyectos\web_scraping>.\venv\Scripts\activate.ps1
+C:\Users\PC\Desktop\Proyectos\web_scraping>.\venv\Scripts\activate.bat
+
+pip install -r .\requirements.txt
 
 Github 
 git init 
